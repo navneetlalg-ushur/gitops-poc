@@ -2,13 +2,21 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: hello
+  annotations:
+    repo: "https://git.your-big-company.com.br/lms/new-proj"
+    imageregistry: "https://hub.docker.com"
+    maintainer: "Navneet Lal Gupta"
+    email: "navneet@example.com"
+  labels:
+    product: intracity
+    version: stable
 spec:
   schedule: "*/2 * * * *"
   successfulJobsHistoryLimit: 10
   failedJobsHistoryLimit: 10
   jobTemplate:
     spec:
-      parallelism: 10
+      parallelism: 1
       template:
         spec:
           containers:
