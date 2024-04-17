@@ -5,3 +5,4 @@ namespace: prod-crons-world
 
 resources:
 - sample.yml
+- sample2.yml
