@@ -28,5 +28,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; echo sleeping for 2 minutes; sleep 120; echo complete; npm i;
+            - date; echo sleeping for 10 sec; sleep 10; npm i; echo complete;
           restartPolicy: OnFailure
