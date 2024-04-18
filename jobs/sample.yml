@@ -28,5 +28,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; echo sleeping for 2 minutes; sleep 120; echo complete
+            - date; echo sleeping for 2 minutes; sleep 120; echo complete; exit 1;
           restartPolicy: OnFailure
