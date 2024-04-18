@@ -29,4 +29,4 @@ spec:
             - /bin/sh
             - -c
             - date; echo sleeping for 1 minutes; sleep 60; echo complete
-          restartPolicy: OnFailure
+          restartPolicy: Never
