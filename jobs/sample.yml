@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  namespace: Cigna
+  namespace: cigna
   name: hello
   annotations:
     repo: "https://git.your-big-company.com.br/lms/new-proj"
@@ -12,7 +12,7 @@ metadata:
     product: intracity
     version: stable
 spec:
-  schedule: "*/2 * * * *"
+  schedule: "*/1 * * * *"
   successfulJobsHistoryLimit: 10
   failedJobsHistoryLimit: 10
   jobTemplate:

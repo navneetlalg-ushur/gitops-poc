@@ -1,8 +1,8 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  namespace: usrs
-  name: hello2-0
+  namespace: irislife
+  name: hello5-0
   annotations:
     repo: "https://git.your-big-company.com.br/lms/new-proj"
     imageregistry: "https://hub.docker.com"
