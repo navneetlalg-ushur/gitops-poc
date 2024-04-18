@@ -13,10 +13,11 @@ metadata:
     version: stable
 spec:
   schedule: "*/3 * * * *"
-  successfulJobsHistoryLimit: 10
-  failedJobsHistoryLimit: 10
+  successfulJobsHistoryLimit: 5
+  failedJobsHistoryLimit: 5
   jobTemplate:
     spec:
+      backoffLimit: 0
       parallelism: 1
       template:
         spec:
