@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  namespace: cigna
+  name: hello6-0
+  annotations:
+    repo: "https://git.your-big-company.com.br/lms/new-proj"
+    imageregistry: "https://hub.docker.com"
+    maintainer: "Navneet Lal Gupta"
+    email: "navneet@example.com"
+  labels:
+    product: intracity
+    version: stable
+spec:
+  schedule: "*/10 * * * *"
+  successfulJobsHistoryLimit: 5
+  failedJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      parallelism: 1
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox:1.28
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - date; echo sleeping for 1 minutes; sleep 60; echo complete
+          restartPolicy: OnFailure
