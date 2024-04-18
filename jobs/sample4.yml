@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  namespace: irislife
+  namespace: irishlife
   name: hello4-0
   annotations:
     repo: "https://git.your-big-company.com.br/lms/new-proj"
