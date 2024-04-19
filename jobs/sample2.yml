@@ -12,7 +12,7 @@ metadata:
     product: intracity
     version: stable
 spec:
-  schedule: "*/2 * * * *"
+  schedule: "*/1 * * * *"
   successfulJobsHistoryLimit: 5
   failedJobsHistoryLimit: 5
   jobTemplate:
@@ -28,5 +28,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - date; echo sleeping for 1 minutes; sleep 60; echo complete
+            - date; echo sleeping for 10 minutes; sleep 60; npm i
           restartPolicy: Never
